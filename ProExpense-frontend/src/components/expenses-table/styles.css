@@ -1,0 +1,30 @@
+.expenses-table {
+    width: 100%;
+    max-width: 1600px;
+    border-collapse: collapse;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 3px 3px rgba(0,0,0, 0.1);
+}
+
+.expenses-table thead {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.expenses-table td {
+    border: 1px solid #000;
+    background-color: var(--cinza-principal);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.expenses-table th,
+.expenses-table td {
+    padding: 12px 15px;
+}  
+
+.expenses-table tbody tr:hover td{
+    background-color: var(--darker-cinza-principal);
+}

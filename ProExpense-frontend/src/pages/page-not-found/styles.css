@@ -1,0 +1,19 @@
+.page-not-found-container {
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: var(--cor-secundaria);
+}
+
+.page-not-found-container h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+.not-found-icon {
+    color: red;
+}
