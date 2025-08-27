@@ -24,7 +24,7 @@ export default function RegisterPage(){
         setError(null);
         setLoading(true);
 
-        backend.post("/signup", {
+        backend.post("/auth/signup", {
             name : name,
             email : email,
             password: password,
