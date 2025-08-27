@@ -1,11 +1,8 @@
 import React from 'react';
 import './styles.css';
 import {useNavigate} from "react-router-dom";
+import { backend } from '../../context/AuthContext'
 import axios from 'axios';
-
-const backend = axios.create({
-    baseURL: 'http://localhost:8080/auth'
-});
 
 export default function RegisterPage(){
 
