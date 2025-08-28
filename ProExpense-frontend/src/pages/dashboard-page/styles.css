@@ -1,3 +1,10 @@
+@media(max-width:875px){
+    .dashboard-page-wrapper {
+        height: 100%;
+        padding-bottom: 80px;
+    }
+}
+
 .dashboard-page-wrapper {
     height: 100vh;
     width: 100%;
@@ -14,17 +21,6 @@
     margin: 60px auto 20px;
 }
 
-#register-expense-button {
-    font-weight: bold;
-    padding: 16px 20px;
-    background-color: var(--azul-principal);
-    color: var(--branco);
-    border: none;
+.round {
     border-radius: 30px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-#register-expense-button:hover {
-    background-color: var(--azul-secundario);
 }

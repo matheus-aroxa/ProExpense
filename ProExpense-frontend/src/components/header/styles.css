@@ -9,7 +9,7 @@
     color: #007bff;
 }
 
-.logout-button {
+.primary-button {
     padding: 12px 20px;
     background-color: #007bff;
     color: white;
@@ -21,7 +21,7 @@
     transition: background-color 0.3s ease;
 }
 
-.logout-button:hover {
+.primary-button:hover {
     background-color: #0056b3;
 }
 

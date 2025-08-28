@@ -11,7 +11,7 @@ export default function Header(){
         <header className="dashboard-header">
             <Link id="x-icon" to="https://x.com/mir0mori"><XIcon fontSize="large" /></Link>
             <h1>ProExpense</h1>
-            <button className="logout-button" onClick={() => {navigate("/")}}>Logout</button>
+            <button className="primary-button" onClick={() => {navigate("/")}}>Logout</button>
         </header>
     );
 }

@@ -39,11 +39,11 @@ export default function ExpensesTable({expenses}){
                         const categoryName = category ? category.name : "No category";
                     
                     return <tr key={expense.id} onClick={() => navigate(`/expense/${expense.id}`)}>
-                        <td>{expense.name}</td>
-                        <td>{expense.description}</td>
-                        <td>{categoryName}</td>
-                        <td>$ {expense.amount.toFixed(2)}</td>
-                        <td>{expense?.expenseDate.slice(0,10)}</td>
+                        <td data-th="Name">{expense.name}</td>
+                        <td data-th="Description">{expense.description}</td>
+                        <td data-th="Category Name">{categoryName}</td>
+                        <td data-th="Amount">$ {expense.amount.toFixed(2)}</td>
+                        <td data-th="Date">{expense?.expenseDate.slice(0,10)}</td>
                     </tr>
                 }
                     

@@ -1,3 +1,19 @@
+@media(max-width: 767px){
+    thead{
+        display: none;
+    }
+
+    td{
+        display: block;
+    }
+
+    td::before{
+        content: attr(data-th) ": ";
+        font-weight: bold;
+        margin-right: 1.5rem;
+    }
+}
+
 .expenses-table {
     width: 100%;
     max-width: 1600px;

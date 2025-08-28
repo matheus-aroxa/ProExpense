@@ -6,6 +6,8 @@ import com.miromorii.proexpensebackend.repositories.ExpensesRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.UUID;
@@ -80,13 +82,14 @@ public class ExpensesService {
         }
     }
 
-    public List<Expenses> getExpenseByUserId(UUID id) {
-        logger.info("Finding expense by user id: {}", id);
+    public Page<Expenses> getExpenseByUserId(UUID id, int page, int itens) {
+        logger.info("Finding expense page {} with {} itens from user: {}", page, itens, id);
 
         if(id == null){
             logger.error("Cannot find expense by id because user id is null");
             throw new IllegalArgumentException("Id cannot be null");
         }
-        return expensesRepository.findExpensesByUserID(id);
+        return expensesRepository.findExpensesByUserID(id, PageRequest.of(page, itens));
     }
+
 }

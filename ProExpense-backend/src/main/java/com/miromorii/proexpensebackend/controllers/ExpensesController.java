@@ -3,6 +3,7 @@ package com.miromorii.proexpensebackend.controllers;
 import com.miromorii.proexpensebackend.models.Expenses;
 import com.miromorii.proexpensebackend.services.ExpensesService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.web.PagedModel;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
@@ -26,8 +27,10 @@ public class ExpensesController {
     }
 
     @GetMapping("/userId/{id}")
-    public List<Expenses> getExpenseByUserId(@PathVariable UUID id){
-        return expensesService.getExpenseByUserId(id);
+    public PagedModel<Expenses> getExpenseByUserId(@PathVariable UUID id,
+                                                   @RequestParam(value = "page", defaultValue = "0") int page,
+                                                   @RequestParam(value = "itens", defaultValue = "8") int itens){
+        return new PagedModel<>(expensesService.getExpenseByUserId(id, page, itens));
     }
 
     @PostMapping

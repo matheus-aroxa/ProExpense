@@ -3,7 +3,8 @@ import axios from 'axios';
 
 //instancia única do axios para toda a aplicação
 export const backend = axios.create({
-    baseURL: 'https://proexpense-backend.onrender.com',
+    baseURL: 'https://proexpense-backend.onrender.com'
+    // baseURL: 'http://localhost:8080'
 });
 
 const AuthContext = createContext(null);
