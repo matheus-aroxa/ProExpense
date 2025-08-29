@@ -42,7 +42,7 @@ export default function DashboardPage(){
                 <div style={{display: "flex", gap: "24px"}}>
 
                     <button className="primary-button round" onClick={() => {navigate("/register-expense")}}>Register a new expense</button>
-                    {page > 0 && <button className="primary-button round" onClick={() => setPage(page - 1)}>Previous</button>}
+                    {page > 0 && expenses && <button className="primary-button round" onClick={() => setPage(page - 1)}>Previous</button>}
                     {page !== (expenses?.page.totalPages - 1) && <button className="primary-button round" onClick={() => setPage(page + 1)}>Next</button>}
 
                 </div>

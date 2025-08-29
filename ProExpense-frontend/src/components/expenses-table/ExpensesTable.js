@@ -35,7 +35,7 @@ export default function ExpensesTable({expenses}){
                 {   //formatação mes/dia/ano
                     expenses.map(expense => {
 
-                        const category = userCategories.find(cat => cat.id === expense.categoryID);
+                        const category = userCategories?.find(cat => cat.id === expense.categoryID);
                         const categoryName = category ? category.name : "No category";
                     
                     return <tr key={expense.id} onClick={() => navigate(`/expense/${expense.id}`)}>

@@ -31,9 +31,16 @@
 
 .expenses-table td {
     border: 1px solid #000;
-    background-color: var(--cinza-principal);
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.expenses-table tbody tr:nth-child(odd) {
+    background-color: var(--cinza-principal);
+}
+
+.expenses-table tbody tr:nth-child(even) {
+    background-color: var(--darker-cinza-principal);
 }
 
 .expenses-table th,
@@ -44,3 +51,4 @@
 .expenses-table tbody tr:hover td{
     background-color: var(--darker-cinza-principal);
 }
+
